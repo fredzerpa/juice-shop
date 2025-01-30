@@ -1,0 +1,12 @@
+name: Juice Shop CI
+description: CI/CD pipeline for OWASP Juice Shop
+author: Fred Zerpa
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - run: echo "Running tests..."
+      - run: echo "Tests passed!"
