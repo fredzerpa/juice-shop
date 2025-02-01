@@ -1,0 +1,11 @@
+name: Snyk example 
+on: push
+jobs:
+  security:
+    runs-on: self-hosted
+    steps:
+    - uses: snyk/actions/setup@master
+    - name: Snyk test
+      run: snyk test
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
