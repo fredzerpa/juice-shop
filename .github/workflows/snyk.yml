@@ -1,4 +1,4 @@
-name: Snyk example 
+name: Snyk Action
 on: push
 jobs:
   security:
