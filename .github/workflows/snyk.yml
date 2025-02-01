@@ -5,10 +5,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@master
-      - name: Run npm install
-        run: npm install
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
+        run: snyk test 
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
