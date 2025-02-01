@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   security:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
