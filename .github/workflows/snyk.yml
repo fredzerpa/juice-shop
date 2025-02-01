@@ -7,5 +7,5 @@ jobs:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         run: snyk test
-        with:
-          args: --org=b512ae7b-a90b-4f80-b767-f60206ea1138
+        # with:
+          # args: --org=b512ae7b-a90b-4f80-b767-f60206ea1138
