@@ -8,6 +8,4 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         run: snyk test
         with:
-          args: --all-projects --org=b512ae7b-a90b-4f80-b767-f60206ea1138
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          args: --org=b512ae7b-a90b-4f80-b767-f60206ea1138
