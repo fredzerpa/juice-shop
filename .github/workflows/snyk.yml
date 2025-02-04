@@ -1,11 +1,13 @@
 name: Example workflow for Node using Snyk
 on: push
+env:
+  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 jobs:
   sast-test:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@master
+      - name: Auth with Snyk
+        run: snyk auth ${{env.SNYK_TOKEN}}
       - name: Run Snyk to check for vulnerabilities
-        run: SNYK_TOKEN=${{env.SNYK_TOKEN}} snyk code test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: snyk code test
