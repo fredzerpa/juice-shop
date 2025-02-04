@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Auth with Snyk
-        run: snyk auth ${{env.SNYK_TOKEN}}
+        run: snyk auth b512ae7b-a90b-4f80-b767-f60206ea1138 
       - name: Run Snyk to check for vulnerabilities
         run: snyk code test
