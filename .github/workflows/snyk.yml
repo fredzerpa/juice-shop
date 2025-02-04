@@ -11,5 +11,5 @@ jobs:
         run: snyk code test
         continue-on-error: true
       - name: SCA Snyk
-        run: snyk test
+        run: npm install && snyk test
         continue-on-error: true
