@@ -1,11 +1,13 @@
 name: Example workflow for Node using Snyk 2
 on: push
 jobs:
-  security:
+  sast-test:
     runs-on: self-hosted
     steps:
       - name: Checkout Master
         uses: actions/checkout@master
+      - name: Snyk Auth
+        run: snyk auth
       - name: Run Snyk to check for vulnerabilities
         run: snyk code test 
         env:
