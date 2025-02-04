@@ -8,9 +8,7 @@ jobs:
     steps:
       - name: Checkout Master
         uses: actions/checkout@master
-      - name: Snyk Auth
-        run: snyk auth
       - name: Run Snyk to check for vulnerabilities
-        run: snyk code test 
+        run: snyk test --all-projects --org=b512ae7b-a90b-4f80-b767-f60206ea1138
         #env:
           #SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
