@@ -11,4 +11,3 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: code test
-          args: org=b512ae7b-a90b-4f80-b767-f60206ea1138 
